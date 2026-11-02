@@ -3,7 +3,7 @@
 **An Android VPN and tunnelling app by John Reese.** Reese Tunnel brings SSH, V2Ray, DNS tunnelling, UDP-Custom, and configuration-file tools together in one Android app.
 
 > [!CAUTION]
-> **The updater manifest and GitHub Release currently point to a TEST build, not a real VPN update.** The `3.23.27-test` APKs only show a Hello World test screen; they do not include VPN functionality. They are debug-signed and published only to verify the updater. Do not treat them as production releases. A production-signed release and matching `latest.json` will be announced separately.
+> The earlier `3.23.27-test` prerelease was a Hello World updater test—not a VPN client—and was signed with Android's debug key. Android cannot update that package in place to the official release. If you installed it, back up any data or configuration files, uninstall the test app, then install the matching ARM APK below. Uninstalling may erase app data.
 
 ## What Reese Tunnel does
 
@@ -26,9 +26,9 @@ Keep configuration files and passwords private. Encryption and device binding ra
 
 ## Updates and releases
 
-The app checks the GitHub-hosted `latest.json` manifest and selects the matching ARM architecture when an update is available. Downloads are checked against the manifest’s size and SHA-256 before Android’s package installer is opened; installation still requires the user’s confirmation.
+The app checks the GitHub-hosted [`latest.json`](latest.json) manifest and selects the supported ARM architecture when an update is available. Downloads are checked against the manifest's size and SHA-256 before Android's package installer is opened; installation still requires the user's confirmation.
 
-**Current status:** the manifest at [`latest.json`](latest.json) and the [`3.23.27-test prerelease`](https://github.com/REESETUNNEL/REESE-TUNNEL/releases/tag/v3.23.27-test) are updater-test artifacts only. They are not suitable as a production Reese Tunnel update. Wait for a clearly identified production release before installing an official update.
+**Current public release: [Reese Tunnel 3.23.28 (version code 146)](https://github.com/REESETUNNEL/REESE-TUNNEL/releases/tag/v3.23.28).** The manifest points to the two official release APKs and validates their expected size and SHA-256. The older `3.23.27-test` release remains a historical updater test and is not selected by the current manifest. Device-specific VPN and game connectivity can still vary.
 
 ## Project and credits
 
@@ -38,9 +38,9 @@ The app checks the GitHub-hosted `latest.json` manifest and selects the matching
 
 ## Project status and source
 
-Reese Tunnel’s Android source code and private development materials are **not** published in this repository. This repository is for public product information, release notices, and updater metadata; it is not an open-source source-code distribution. No permission to copy, modify, rebrand, or redistribute the private app or source code is granted by the presence of this public repository.
+Reese Tunnel's Android source code and private development materials are **not** published in this repository. This repository is for public product information, release notices, and updater metadata; it is not an open-source source-code distribution. No permission to copy, modify, rebrand, or redistribute the private app or source code is granted by the presence of this public repository.
 
-The current local release candidate is **3.23.27 (version code 145)**. It is being built for testing and is not yet a production release published on GitHub. Check the Releases page and its notes before installing any package.
+The 3.23.28 release refreshes the protected `.RT` import integrity pins for its signing certificate and packaged application fingerprints. It has passed the project's available automated unit tests and native cryptographic self-test; device-level behavior should be checked on the intended Android device.
 
 ## Security and responsible use
 
