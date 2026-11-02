@@ -1,41 +1,57 @@
 # Reese Tunnel
 
-**Reese Tunnel** is an Android VPN and tunneling application developed and maintained by **John Reese**. It is designed to route a phone's network traffic through supported SSH- and V2Ray-based tunnel profiles using Android's `VpnService`.
+**An Android VPN and tunnelling app by John Reese.** Reese Tunnel brings SSH, V2Ray, DNS tunnelling, UDP-Custom, and configuration-file tools together in one Android app.
 
-## What it does
+> [!CAUTION]
+> **The updater manifest and GitHub Release currently point to a TEST build, not a real VPN update.** The `3.23.27-test` APKs only show a Hello World test screen; they do not include VPN functionality. They are debug-signed and published only to verify the updater. Do not treat them as production releases. A production-signed release and matching `latest.json` will be announced separately.
 
-- Connects supported SSH tunnel configurations.
-- Imports and uses supported V2Ray profiles, including VLESS, VMess, and Trojan where the selected transport is supported.
-- Offers separate Stream and Gaming mode selections. Gaming mode is intended to forward UDP for compatible tunnel profiles; real-world compatibility depends on the server, protocol, carrier transport, Android device, and the app/game.
-- Imports and exports Reese Tunnel configuration files. Some file protections can be tied to a password or device, depending on the export settings and file format.
+## What Reese Tunnel does
 
-This repository is a **public product-information and release-announcement page only**. Reese Tunnel's application source code, native libraries, build scripts, signing keys, and private development files are not published here. A public repository does not mean that the application is open source or that its code may be copied or redistributed.
+Reese Tunnel creates an Android VPN interface and routes device traffic through a configured tunnel. Available connection choices include:
 
-## Project details
+- **SSH Stream** and **SSH Gaming** modes.
+- **V2Ray Stream** and **V2Ray Gaming** modes, with UDP forwarding available for supported built-in-engine profiles.
+- **VLESS, VMess, and Trojan** profile import, plus supported TCP/WebSocket transports. Profiles requiring additional transports may use the bundled Xray core; V2Ray Gaming is limited to compatible profiles and does not use that core for its UDP-forwarding path.
+- **SlowDNS** and **UDP-Custom** connection options.
+- Payload, SNI, remote-proxy, and DNS settings, along with connection logs, traffic totals, ping diagnostics, and other network utilities.
+- ARM64 (`arm64-v8a`) and ARMv7 (`armeabi-v7a`) Android package variants.
 
-- Product: Reese Tunnel
-- Product owner and maintainer: John Reese
-- Android application ID: `com.johnreese.fsociety`
-- Current documented development version: **3.23.25** (version code 142)
-- Minimum Android API declared by the app: **24** (Android 7.0)
-- Supported ARM package targets: `arm64-v8a` and `armeabi-v7a`
+Mode availability does not guarantee that every server, carrier, device, or game is compatible. Free Fire login and match connectivity have not been confirmed fixed across devices; a connected indicator alone does not prove that game traffic is working end to end.
 
-Version details describe the current development build, not a guarantee that a corresponding signed public release is available. Consult the Releases page before downloading; do not install APKs from unofficial mirrors.
+## Reese Tunnel `.RT` configuration files
 
-## Limitations and status
+The app can import and export Reese Tunnel configuration files. New exports use an opaque binary format with authenticated encryption. An export must be protected by a password, an authorized hardware ID (HWID), or both; the APK signing certificate is not the file-encryption key. Exporters can also include a note for recipients.
 
-VPN and gaming behavior varies by server configuration and network. In particular, **Free Fire login and match connectivity have not been confirmed fixed on a physical device**. A successful tunnel status or ping does not by itself prove that game traffic is reaching and returning from the game service.
+Keep configuration files and passwords private. Encryption and device binding raise the barrier to casual inspection, but do not make a configuration impossible to recover from a device controlled by an attacker, a modified app, or someone who knows the password. Never publish a private configuration or its password in an issue or chat.
 
-Cloud configuration import/export, automatic update enforcement, and a mandatory update lockout are not currently documented as available features. Do not assume that an update is required to connect unless a future release notice says so.
+## Updates and releases
+
+The app checks the GitHub-hosted `latest.json` manifest and selects the matching ARM architecture when an update is available. Downloads are checked against the manifest’s size and SHA-256 before Android’s package installer is opened; installation still requires the user’s confirmation.
+
+**Current status:** the manifest at [`latest.json`](latest.json) and the [`3.23.27-test prerelease`](https://github.com/REESETUNNEL/REESE-TUNNEL/releases/tag/v3.23.27-test) are updater-test artifacts only. They are not suitable as a production Reese Tunnel update. Wait for a clearly identified production release before installing an official update.
+
+## Project and credits
+
+**Owner, creator, and maintainer:** John Reese, also known as Donquixote Doflamingo. Reese Tunnel is an independent project created by a Kenyan developer. It was inspired by the practical approach of HTTP Custom, but it is not affiliated with or endorsed by HTTP Custom.
+
+**Testing and feedback:** Mjaba, Frontend Gidiz, and Kevo loves are credited in the app for testing, bug reports, and troubleshooting. Their feedback helped uncover issues across builds, devices, and network conditions.
+
+## Project status and source
+
+Reese Tunnel’s Android source code and private development materials are **not** published in this repository. This repository is for public product information, release notices, and updater metadata; it is not an open-source source-code distribution. No permission to copy, modify, rebrand, or redistribute the private app or source code is granted by the presence of this public repository.
+
+The project’s current development version is **3.23.26 (version code 143)**. That version number does not mean a production-signed APK is currently available. Check the Releases page and its notes before installing any package.
 
 ## Security and responsible use
 
-Use only tunnel servers and configuration files you are authorized to use. Protect exported files and their passwords. Device binding or encryption raises the bar against casual access but cannot make data impossible to inspect on a device controlled by an attacker or owner with root/debugging access. Do not post passwords, signing keys, private configuration files, or sensitive exploit details in public repository issues.
+Use only tunnel servers and profiles you are authorized to use. Do not share passwords, private signing keys, or unredacted locked `.RT` files. Report security concerns privately to the maintainer rather than posting exploit details or sensitive configuration data publicly.
 
-## Releases
+Third-party libraries and components remain the property of their respective authors and are governed by their own licenses. Reese Tunnel does not claim ownership of those components.
 
-Official release information will be posted under [GitHub Releases](https://github.com/REESETUNNEL/REESE-TUNNEL/releases) when a signed release is ready. Always verify the release notes and package variant for your device architecture. An unsigned APK is not an install-ready official release.
+## Maintainer
 
-## Ownership and license
+For support, include the app version, device/Android version, selected tunnel mode, and relevant redacted log lines. Do not include passwords or private configs.
 
-Reese Tunnel is a product of John Reese. No application source code or open-source license is included in this repository. Unless a separate written license is provided, no permission is granted to copy, modify, redistribute, or rebrand the application or its private source code. Trademarks and third-party components remain the property of their respective owners.
+- WhatsApp: [John Reese](https://wa.me/254759424232)
+- Telegram: [@donquixoted0flamingo](https://t.me/donquixoted0flamingo)
+- Website: [wifibypass.org](https://www.wifibypass.org)
