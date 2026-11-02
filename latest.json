@@ -1,18 +1,18 @@
 {
-  "versionCode": 144,
-  "versionName": "3.23.27-test",
-  "releaseNotes": "UPDATER TEST ONLY: installs a simple Hello World screen labeled REESE TUNNEL UPDATE TEST. This is not a VPN client and is signed with the public Android debug test key. Do not treat this as a production release.",
-  "releaseUrl": "https://github.com/REESETUNNEL/REESE-TUNNEL/releases/tag/v3.23.27-test",
+  "versionCode": 146,
+  "versionName": "3.23.28",
+  "releaseNotes": "Refreshes protected .RT import integrity validation to match the 3.23.28 release certificate and packaged fingerprints. Device-specific VPN and game connectivity can still vary. If you installed the older 3.23.27-test debug-signed app, back up any data/configs and uninstall it before installing this release; Android cannot update across different signing certificates, and uninstalling may erase app data.",
+  "releaseUrl": "https://github.com/REESETUNNEL/REESE-TUNNEL/releases/tag/v3.23.28",
   "downloads": {
     "arm64-v8a": {
-      "url": "https://github.com/REESETUNNEL/REESE-TUNNEL/releases/download/v3.23.27-test/REESE-TUNNEL-3.23.27-test-arm64-v8a.apk",
-      "sha256": "b352b08e618b56bad02940270883c96abed3b8ae771519ea8aa76bf1d1056126",
-      "sizeBytes": 26005
+      "url": "https://github.com/REESETUNNEL/REESE-TUNNEL/releases/download/v3.23.28/ReeseTunnel-3.23.28-arm64-v8a-release.apk",
+      "sha256": "b45dd9993e973f62fbd80cf39f108f07e3445dd5dbd689d59082c1d3939b5dee",
+      "sizeBytes": 40228505
     },
     "armeabi-v7a": {
-      "url": "https://github.com/REESETUNNEL/REESE-TUNNEL/releases/download/v3.23.27-test/REESE-TUNNEL-3.23.27-test-armeabi-v7a.apk",
-      "sha256": "775e7522f3af07e592955924f2f1a2e3761980c38799d1d870116defdb887411",
-      "sizeBytes": 24631
+      "url": "https://github.com/REESETUNNEL/REESE-TUNNEL/releases/download/v3.23.28/ReeseTunnel-3.23.28-armeabi-v7a-release.apk",
+      "sha256": "5bc89cc4160f6d942aa1817372a2c1fc3fb8adb07233c4254e7ca107a1666349",
+      "sizeBytes": 40683175
     }
   }
 }
