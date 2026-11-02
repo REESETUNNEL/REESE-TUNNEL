@@ -1,0 +1,18 @@
+{
+  "versionCode": 144,
+  "versionName": "3.23.27-test",
+  "releaseNotes": "UPDATER TEST ONLY: installs a simple Hello World screen labeled REESE TUNNEL UPDATE TEST. This is not a VPN client and is signed with the public Android debug test key. Do not treat this as a production release.",
+  "releaseUrl": "https://github.com/REESETUNNEL/REESE-TUNNEL/releases/tag/v3.23.27-test",
+  "downloads": {
+    "arm64-v8a": {
+      "url": "https://github.com/REESETUNNEL/REESE-TUNNEL/releases/download/v3.23.27-test/REESE-TUNNEL-3.23.27-test-arm64-v8a.apk",
+      "sha256": "b352b08e618b56bad02940270883c96abed3b8ae771519ea8aa76bf1d1056126",
+      "sizeBytes": 26005
+    },
+    "armeabi-v7a": {
+      "url": "https://github.com/REESETUNNEL/REESE-TUNNEL/releases/download/v3.23.27-test/REESE-TUNNEL-3.23.27-test-armeabi-v7a.apk",
+      "sha256": "775e7522f3af07e592955924f2f1a2e3761980c38799d1d870116defdb887411",
+      "sizeBytes": 24631
+    }
+  }
+}
