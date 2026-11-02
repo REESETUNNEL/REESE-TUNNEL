@@ -40,7 +40,7 @@ The app checks the GitHub-hosted `latest.json` manifest and selects the matching
 
 Reese Tunnel’s Android source code and private development materials are **not** published in this repository. This repository is for public product information, release notices, and updater metadata; it is not an open-source source-code distribution. No permission to copy, modify, rebrand, or redistribute the private app or source code is granted by the presence of this public repository.
 
-The project’s current development version is **3.23.26 (version code 143)**. That version number does not mean a production-signed APK is currently available. Check the Releases page and its notes before installing any package.
+The current local release candidate is **3.23.27 (version code 145)**. It is being built for testing and is not yet a production release published on GitHub. Check the Releases page and its notes before installing any package.
 
 ## Security and responsible use
 
@@ -54,4 +54,5 @@ For support, include the app version, device/Android version, selected tunnel mo
 
 - WhatsApp: [John Reese](https://wa.me/254759424232)
 - Telegram: [@donquixoted0flamingo](https://t.me/donquixoted0flamingo)
+- Official website: [reesetunnel.com](https://reesetunnel.com)
 - Website: [wifibypass.org](https://www.wifibypass.org)
