@@ -2,8 +2,6 @@
 
 **An Android VPN and tunnelling app by John Reese.** Reese Tunnel brings SSH, V2Ray, DNS tunnelling, UDP-Custom, and configuration-file tools together in one Android app.
 
-> [!CAUTION]
-> The earlier `3.23.27-test` prerelease was a Hello World updater test—not a VPN client—and was signed with Android's debug key. Android cannot update that package in place to the official release. If you installed it, back up any data or configuration files, uninstall the test app, then install the matching ARM APK below. Uninstalling may erase app data.
 
 ## What Reese Tunnel does
 
